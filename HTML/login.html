@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,16 @@
         <img src="../images/login-svgrepo-com.svg" alt="Imagine login">
     </div>
     <div class="separator"></div>
-    <div class="login-form">
+
+    <form class="login-form" id="login-form">
         <h2>Autentificare</h2>
-        <input type="email" placeholder="Adresa de email">
-        <input type="password" placeholder="Parola">
+        <input type="email" id="email" placeholder="Adresa de email" required>
+        <input type="password" id="password" placeholder="Parola" required>
         <button type="submit">Conecteaza-te</button>
-        <p class="register-text">Nu ai cont? <a href="register.html">Inregistrează-te</a> </p>
-    </div>
+        <p class="register-text">Nu ai cont? <a href="register.html">Inregistrează-te</a></p>
+    </form>
+
 </div>
+<script src="../JS/login_js.js"></script>
 </body>
 </html>
