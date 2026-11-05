@@ -1,0 +1,14 @@
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: hsl(0, 100%, 50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    pointer-events: none; /* Esential: cursorul sa nu blocheze click-urile pe link-uri/butoane */
+    transform: translate(-50%, -50%); /* Il centreaza exact pe varful mouse-ului */
+    z-index: 9999;
+    transition: transform 0.05s ease-out;
+}
