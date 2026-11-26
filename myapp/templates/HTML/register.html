@@ -1,17 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Înregistrare - Creează un cont</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/register_style.css">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/register_style.css' %}">
 </head>
 <body>
 <main class="page">
     <section class="card">
         <h1>Creare Cont</h1>
         <form class="register-form" action="#" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="row">
                 <label for="username">Nume utilizator</label>
                 <input type="text" id="username" name="username" placeholder="ex: ioanaTW" required>
@@ -44,7 +46,7 @@
             </div>
 
             <p class="login-link">
-                Ai deja cont? <a href="login.html">Mergi la login</a>
+                Ai deja cont? <a href="{% url 'login' %}">Mergi la login</a>
             </p>
         </form>
     </section>

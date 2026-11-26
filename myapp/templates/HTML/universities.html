@@ -1,18 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universități din România</title>
-    <link rel="stylesheet" href="../CSS/universities_style.css">
+    <link rel="stylesheet" href="{% static 'CSS/universities_style.css' %}">
 </head>
 <body>
 
 <!-- Navigație pentru pasul 6 (Link pages together) -->
 <nav class="nav-bar">
-    <a href="home.html">&larr; Acasă</a>
-    <a href="chatbot.html">Chatbot</a>
-    <a href="login.html">Autentificare</a>
+    <a href="{% url 'home' %}">&larr; Acasă</a>
+    <a href="{% url 'chatbot' %}">Chatbot</a>
+    <a href="{% url 'login' %}">Autentificare</a>
 </nav>
 
 <div class="container">
@@ -42,6 +43,6 @@
 </div>
 
 <!-- Pasul 4: Integrarea scriptului JavaScript -->
-<script src="../JS/universities_js.js"></script>
+<script src="{% static 'JS/universities_js.js' %}"></script>
 </body>
 </html>
