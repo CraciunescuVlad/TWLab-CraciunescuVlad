@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rețete Culinară - TheMealDB API</title>
+    <link rel="stylesheet" href="{% static 'CSS/meals_style.css' %}">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Acasă</a></li>
+            <li><a href="{% url 'universities' %}">Universități</a></li>
+            <li><a href="{% url 'galerie' %}">Galerie</a></li>
+            <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+            <li><a href="{% url 'meals' %}">Rețete (API)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Căutare Rețete (TheMealDB API)</h1>
+
+    <!-- Search area -->
+    <form id="searchForm">
+        <input id="queryInput" type="text" placeholder="Caută un preparat (ex: pasta, chicken, cake)..." autocomplete="off">
+        <button id="searchBtn" type="submit">Search</button>
+    </form>
+
+    <!-- Status area -->
+    <p id="status" aria-live="polite"></p>
+
+    <!-- Results area -->
+    <div id="results"></div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Comunitatea de Tehnologii Web - Lab 9</p>
+</footer>
+
+<script src="{% static 'JS/meals.js' %}"></script>
+</body>
+</html>
