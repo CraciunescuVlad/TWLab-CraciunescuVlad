@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Foto</title>
+    <!-- Stilurile CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/galerie.css' %}">
+    <!-- Scripturile JS compilate din TypeScript -->
+    <script src="{% static 'TS/cursor.js' %}" defer></script>
+    <script src="{% static 'TS/galerie.js' %}" defer></script>
+</head>
+<body>
+<nav>
+    <a href="{% url 'home' %}">Acasă</a>
+    <a href="{% url 'galerie' %}">Galerie</a>
+</nav>
+
+<div class="carousel-container">
+    <div class="carousel-view">
+        <img id="carousel-image" src="{% static 'images/images.jpeg' %}" alt="Carusel">
+    </div>
+</div>
+</body>
+</html>

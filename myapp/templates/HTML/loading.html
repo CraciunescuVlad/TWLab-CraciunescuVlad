@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se redirecționează...</title>
+    <meta http-equiv="refresh" content="2; url={% url 'login' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/loading_style.css' %}">
+</head>
+<body>
+<div class="loading-container">
+    <img src="{% static 'images/logo.jpeg' %}" alt="Logo" class="logo">
+    <div class="loader"></div>
+</div>
+</body>
+</html>
